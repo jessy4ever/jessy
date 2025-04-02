@@ -1,0 +1,152 @@
+/* Importer une belle police */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #fdf8f2;
+    color: #333;
+    background-image: url('doc2.png'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+}
+
+.background-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.left-side {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    z-index: 1;
+}
+
+.right-side {
+    flex: 1;
+    background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%, 60% 50%);
+    z-index: 0;
+    position: relative;
+}
+
+/* Barre de navigation */
+header {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content {
+    max-width: 500px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+p {
+    margin: 10px 0 20px;
+    font-size: 1.1rem;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+/* Boutons */
+.btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+.reset {
+    background-color: #95a5a6;
+}
+
+.reset:hover {
+    background-color: #7f8c8d;
+}
+
+/* Image */
+.image img {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image {
+        margin-top: 20px;
+    }
+}
